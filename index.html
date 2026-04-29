@@ -596,7 +596,7 @@ function renderDayGrid(){
     </button>
   `).join('');
 }
-
+<div class="ex-card ${done?'done':''}" id="card-${ex.id}">
 function selectDay(id){
   activeDay = DAYS.find(d=>d.id===id);
   renderDayGrid();
