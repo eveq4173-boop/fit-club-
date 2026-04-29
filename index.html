@@ -578,7 +578,7 @@ function showToast(msg){
 // ─── GREETING ───────────────────────────────────────────────────────────────
 function setGreeting(){
   const h=new Date().getHours();
-  const g=h<12?'Good morning':'h<17?Good afternoon':'Good evening';
+  const g = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
   document.getElementById('hero-greeting').textContent = (h<12?'Good morning ☀️':h<17?'Good afternoon 💪':'Good evening 🌙') + ' !';
   document.getElementById('stat-streak').textContent = getStreak();
   document.getElementById('stat-total').textContent = [...new Set(state.workoutLog.map(l=>l.date))].length;
